@@ -15,7 +15,6 @@ ENDCLASS.
 
 CLASS zcl_types IMPLEMENTATION.
 
-
   METHOD if_oo_adt_classrun~main.
     DATA(lv_name) = 'John Doe'.
     out->write( |'Hello World' { lv_name } | ).
