@@ -10,7 +10,6 @@ CLASS zcl_abap_conditions DEFINITION
 ENDCLASS.
 
 
-
 CLASS zcl_abap_conditions IMPLEMENTATION.
 
   METHOD if_oo_adt_classrun~main.
