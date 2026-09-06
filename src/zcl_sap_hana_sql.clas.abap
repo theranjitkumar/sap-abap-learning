@@ -68,8 +68,48 @@ CLASS zcl_sap_hana_sql IMPLEMENTATION.
       out->write( '=== STOP DEBUGGER ===').
     ENDLOOP.
 * === WHERE Condition END ====
-    	
-    	
+
+
+
+
+* === BETWEEN / IN / LIKE ====
+
+* === BETWEEN / IN / LIKE END ====
+
+********* ++=== LEVEL 3 — Sorting & Limiting ===++********
+
+* === ORDER BY ====
+
+* === ORDER BY END ====
+
+* === LIMIT / OFFSET ====
+
+* === LIMIT / OFFSET END ====
+
+********* ++=== LEVEL 3 — Aggregate Functions ===++********
+
+* === Aggregate Functions ====
+
+* === Aggregate Functions END ====
+
+* === GROUP BY ====
+
+* === GROUP BY END ====
+
+* === HAVING ====
+
+* === HAVING END ====
+
+********* ++=== LEVEL 5 — SQL Joins ===++********
+
+* === INNER JOIN ====
+
+* === INNER JOIN END ====
+
+* === LEFT OUTER JOIN ====
+
+* === LEFT OUTER JOIN END ====
+* RIGHT OUTER JOIN | FULL OUTER JOIN | CROSS JOIN | SELF JOIN | Multiple Joins
     	
   	ENDMETHOD.
 
