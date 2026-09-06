@@ -44,16 +44,30 @@ CLASS zcl_sap_hana_sql IMPLEMENTATION.
 
 * === Alias columns ====
 
-    SELECT client AS Client_Id,
-            booking_date AS Booking_DT
-    FROM /dmo/booking INTO TABLE @DATA(lt_booking) UP TO 10 ROWS.
+*    SELECT client AS Client_Id,
+*            booking_date AS Booking_DT
+*    FROM /dmo/booking INTO TABLE @DATA(lt_booking) UP TO 10 ROWS.
+*
+*    LOOP AT lt_booking INTO DATA(ls_booking).
+*      out->write( |Flight: { ls_booking-client_id } { ls_booking-booking_dt }  | ).
+*
+*      out->write( '=== STOP DEBUGGER ===').
+*    ENDLOOP.
+* === Alias columns END ====
+
+* === WHERE Condition ====
+
+    SELECT DISTINCT client, booking_date
+    FROM /dmo/booking WHERE booking_date = `20260512` OR booking_date = `20270322` INTO TABLE @DATA(lt_booking) UP TO 10 ROWS.
+
+* Operators: =, <>, >, <, ,>=, <=  ||||  Logical: AND, OR, NOT
 
     LOOP AT lt_booking INTO DATA(ls_booking).
-      out->write( |Flight: { ls_booking-client_id } { ls_booking-booking_dt }  | ).
+      out->write( |Flight: { ls_booking-client } { ls_booking-booking_date }  | ).
 
       out->write( '=== STOP DEBUGGER ===').
     ENDLOOP.
-* === Alias columns END ====
+* === WHERE Condition END ====
     	
     	
     	
