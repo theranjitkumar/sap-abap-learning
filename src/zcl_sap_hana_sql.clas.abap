@@ -26,12 +26,12 @@ CLASS zcl_sap_hana_sql IMPLEMENTATION.
 
 * === SELECT columns ====
 
-*    SELECT client, booking_date FROM /dmo/booking INTO TABLE @DATA(lt_booking) UP TO 10 ROWS.
+*    SELECT by client, booking_date FROM /dmo/booking INTO TABLE @DATA(lt_booking) UP TO 10 ROWS.
 *
 *    LOOP AT lt_booking INTO DATA(ls_booking).
 *      out->write( |Flight: { ls_booking-client } { ls_booking-booking_date } | ).
 *    ENDLOOP.
-* === SELECT columns END ====
+* === SELECT by columns END ====
 
 * === SELECT DISTINCT columns ====        	
     	
