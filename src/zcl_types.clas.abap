@@ -1,23 +1,13 @@
-CLASS zcl_types DEFINITION
-  PUBLIC
-  FINAL
-  CREATE PUBLIC .
+class ZCL_TYPES definition
+  public
+  create private .
 
-  PUBLIC SECTION.
-
-    INTERFACES if_oo_adt_classrun .
-
-  PROTECTED SECTION.
-  PRIVATE SECTION.
+public section.
+protected section.
+private section.
 ENDCLASS.
 
 
 
-CLASS zcl_types IMPLEMENTATION.
-
-  METHOD if_oo_adt_classrun~main.
-    DATA(lv_name) = 'John Doe'.
-    out->write( |'Hello World' { lv_name } | ).
-  ENDMETHOD.
-
+CLASS ZCL_TYPES IMPLEMENTATION.
 ENDCLASS.
