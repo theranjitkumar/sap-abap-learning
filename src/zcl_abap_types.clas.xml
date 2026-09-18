@@ -3,9 +3,9 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_TYPES</CLSNAME>
+    <CLSNAME>ZCL_ABAP_TYPES</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Types in sap abapp</DESCRIPT>
+    <DESCRIPT>Types in sap abap</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>

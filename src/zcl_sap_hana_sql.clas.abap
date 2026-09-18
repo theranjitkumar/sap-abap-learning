@@ -57,23 +57,31 @@ CLASS zcl_sap_hana_sql IMPLEMENTATION.
 
 * === WHERE Condition ====
 
-    SELECT DISTINCT client, booking_date
-    FROM /dmo/booking WHERE booking_date = `20260512` OR booking_date = `20270322` INTO TABLE @DATA(lt_booking) UP TO 10 ROWS.
-
-* Operators: =, <>, >, <, ,>=, <=  ||||  Logical: AND, OR, NOT
-
-    LOOP AT lt_booking INTO DATA(ls_booking).
-      out->write( |Flight: { ls_booking-client } { ls_booking-booking_date }  | ).
-
-      out->write( '=== STOP DEBUGGER ===').
-    ENDLOOP.
+*    SELECT DISTINCT client, booking_date
+*    FROM /dmo/booking WHERE booking_date = `20260512` OR booking_date = `20270322` INTO TABLE @DATA(lt_booking) UP TO 10 ROWS.
+*
+** Operators: =, <>, >, <, ,>=, <=  ||||  Logical: AND, OR, NOT
+*
+*    LOOP AT lt_booking INTO DATA(ls_booking).
+*      out->write( |Flight: { ls_booking-client } { ls_booking-booking_date }  | ).
+*
+*      out->write( '=== STOP DEBUGGER ===').
+*    ENDLOOP.
 * === WHERE Condition END ====
 
 
 
 
 * === BETWEEN / IN / LIKE ====
+    SELECT DISTINCT client, booking_date
+    FROM /dmo/booking WHERE booking_date = `20260512` OR booking_date = `20270322` INTO TABLE @DATA(lt_booking) UP TO 10 ROWS.
 
+
+    LOOP AT lt_booking INTO DATA(ls_booking).
+      out->write( |Flight: { ls_booking-client } { ls_booking-booking_date }  | ).
+
+      out->write( '=== STOP DEBUGGER ===').
+    ENDLOOP.
 * === BETWEEN / IN / LIKE END ====
 
 ********* ++=== LEVEL 3 — Sorting & Limiting ===++********
